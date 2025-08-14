@@ -1,3 +1,31 @@
+document.addEventListener('DOMContentLoaded', () => {
+    handleMainContentChange();
+});
+
+function handleMainContentChange() {
+    const btnHome = document.getElementById('btnHome');
+    const btnInfo = document.getElementById('btnInfo');
+    const pitch = document.getElementById('pitch');
+    const info = document.getElementById('info');
+    
+    // Oculta a área de info inicialmente
+    info.style.display = 'none';
+    
+    btnHome.addEventListener('click', () => {
+        pitch.style.display = 'block';
+        info.style.display = 'none';
+        btnHome.classList.add('active');
+        btnInfo.classList.remove('active');
+    });
+    
+    btnInfo.addEventListener('click', () => {
+        pitch.style.display = 'none';
+        info.style.display = 'block';
+        btnInfo.classList.add('active');
+        btnHome.classList.remove('active');
+    });
+}
+
 const form = document.getElementById('subscribeForm');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
