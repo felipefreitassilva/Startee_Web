@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* vertical centering */
+    background-color: #f5f5f5; /* page background */
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center; /* mobile-first */
+    /* transparent: no background, no border */
+}
+
+.logo img {
+    width: 200px;       /* slightly bigger */
+    height: 200px;      /* square to make it circular */
+    border-radius: 50%; /* makes it round */
+    object-fit: cover;  /* keeps image proportion inside the circle */
+    margin-bottom: 20px;
+}
+
+.pitch {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* stacked on mobile */
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%; /* full width on mobile */
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+    .pitch {
+    text-align: justify;
+    }
+
+    .input-group {
+    flex-direction: row; /* two columns on desktop */
+    gap: 10px;
+    }
+
+    input[type="text"], input[type="email"] {
+    width: 50%; /* each input takes half */
+    }
+
+    form {
+    align-items: flex-start;
+    }
+}
