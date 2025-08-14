@@ -12,7 +12,7 @@ function handleMainContentChange() {
     info.style.display = 'none';
     
     btnHome.addEventListener('click', () => {
-        pitch.style.display = 'block';
+        pitch.style.display = 'flex';
         info.style.display = 'none';
         btnHome.classList.add('active');
         btnInfo.classList.remove('active');
@@ -20,7 +20,7 @@ function handleMainContentChange() {
     
     btnInfo.addEventListener('click', () => {
         pitch.style.display = 'none';
-        info.style.display = 'block';
+        info.style.display = 'flex';
         btnInfo.classList.add('active');
         btnHome.classList.remove('active');
     });
