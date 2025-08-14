@@ -4,149 +4,98 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Startee</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
 
-    html, body {
-      height: 100%;
-    }
+  <meta name="description" content="Startee - Onde ideias viram negócios de verdade">
+  <meta name="keywords" content="Startee, startup, landing page, inovação, tecnologia">
+  <meta name="author" content="Startee">
+  <meta name="theme-color" content="#007AFF">
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center; /* vertical centering */
-      background-color: #f5f5f5; /* page background */
-    }
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:title" content="Startee">
+  <meta property="og:description" content="Onde ideias viram negócios de verdade">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://startee.com.br">
+  <meta property="og:image" content="https://startee.com.br/logo.png">
 
-    .container {
-      max-width: 900px;
-      width: 100%;
-      padding: 40px 20px;
-      text-align: center; /* mobile-first */
-      /* transparent: no background, no border */
-    }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Startee">
+  <meta name="twitter:description" content="Onde ideias viram negócios de verdade">
+  <meta name="twitter:image" content="https://startee.com.br/logo.png">
 
-    .logo img {
-        width: 200px;       /* slightly bigger */
-        height: 200px;      /* square to make it circular */
-        border-radius: 50%; /* makes it round */
-        object-fit: cover;  /* keeps image proportion inside the circle */
-        margin-bottom: 20px;
-    }
-
-    .pitch {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 30px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column; /* stacked on mobile */
-      gap: 15px;
-      align-items: center;
-      width: 100%;
-    }
-
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      width: 100%;
-    }
-
-    input[type="text"], input[type="email"] {
-      padding: 12px;
-      font-size: 1rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      width: 100%; /* full width on mobile */
-    }
-
-    button {
-      padding: 12px 20px;
-      font-size: 1rem;
-      border-radius: 6px;
-      border: none;
-      background-color: #007BFF;
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.3s;
-      width: 100%;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    @media (min-width: 768px) {
-      .pitch {
-        text-align: justify;
-      }
-
-      .input-group {
-        flex-direction: row; /* two columns on desktop */
-        gap: 10px;
-      }
-
-      input[type="text"], input[type="email"] {
-        width: 50%; /* each input takes half */
-      }
-
-      form {
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="https://picsum.photos/500" alt="Logo">
-        </div>
-
-        <div class="pitch">Um breve resumo ou pitch da sua ideia incrível vai aqui. Texto justificado em desktop, centralizado em mobile.</div>
-
-        <form id="subscribeForm">
-            <div class="input-group">
-                <input type="text" name="name" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu email" required>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
+  <div class="container">
+    <div class="logo">
+      <img src="https://picsum.photos/500" alt="Logo">
     </div>
 
-    <script>
-        const form = document.getElementById('subscribeForm');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const data = {
-                name: form.name.value,
-                email: form.email.value
-            };
+    <h1 class="title">Startee</h1>
 
-            try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbwzIEcOUuiWOx9z7xAeV-l18KGbbKvzZ-pbLwbxZnPJja9V3iyrDrCRDxGwbudNoMEn/exec', {
-                    method: 'POST',
-                    body: JSON.stringify(data)
-                });
+    <div class="nav-buttons">
+      <button id="btnHome" class="nav-btn active">Home</button>
+      <button id="btnInfo" class="nav-btn">Info</button>
+    </div>
 
-                const result = await response.json();
-                if (result.status === 'success') {
-                    alert('Obrigado pelo cadastro!');
-                    form.reset();
-                } else {
-                    alert('Erro ao cadastrar: ' + result.message);
-                }
-            } catch (err) {
-                alert('Erro na conexão: ' + err.message);
-            }
-        });
-    </script>
+    <div id="contentArea" class="content-area">
+      <p>🚀 Startee - Onde ideias viram negócios de verdade</p>
+
+      <div id="pitch" class="pitch">
+        <p>Bem-vindo à primeira plataforma de empreendedorismo gamificada que transforma aprendizado em execução real, conectando você a uma comunidade de empreendedores que realmente fazem acontecer.</p>
+      </div>
+
+      <div id="info" class="info">
+        <div>Por que surgiu?</div>
+        
+        <div>
+          <p>A Startee foi feita para você.</p>
+          <p>Você que sonha em empreender, mas acaba preso no excesso de informação, em cursos que só entregam teoria e na falta de feedback prático. A Startee nasceu para transformar suas ideias em negócios concretos.</p>
+          <p>Aqui, você interage com outros empreendedores no feed de ideias e dúvidas, segue trilhas passo a passo para obter resultados reais e recebe feedback imediato - ajudando a lapidar sua ideia até a consolidação do seu negócio.</p>
+        </div>
+
+        <div>Como funciona?</div>
+
+        <div>
+          <p>🎯 Trilha Gamificada</p>
+          <p>Ao longo da trilha, você vai maturar sua ideia, cumprindo cada etapa necessária para tirá-la do papel.</p>
+          <p>A cada entrega, você recebe feedback imediato e personalizado, aumentando a eficácia, reduzindo riscos e acelerando o caminho até a consolidação do negócio.</p>
+        </div>
+
+        <div>
+          <p>🤖 IA como Mentor</p>
+          <p>Inteligência Artificial para respostas rápidas, conexões certas e insights precisos.</p>
+        </div>
+
+        <div>
+          <p>👥 Comunidade que Ajuda</p>
+          <p>Poste ideias e dúvidas nas suas áreas de interesse. Conecte-se com empreendedores reais, troque experiências e faça benchmarking para o seu negócio.</p>
+        </div>
+
+        <div>
+          <p>🏆 Perks e Streaks</p>
+          <p>Recompensas e conquistas para quem mantém o ritmo e realiza conquistas em seus negócios.</p>
+        </div>
+
+        <div>
+          <p>Bônus de Fundador</p>
+          <p>Os primeiros 1.000 usuários ativos ganharão um perk exclusivo de Founder Startee - sua marca registrada como pioneiro.</p>
+          <p>No futuro, seu perfil será reconhecido como parte do hall da fama: um dos primeiros a fazer parte do novo jeito de formar empreendedores no Brasil.</p>
+        </div>
+      </div>
+
+      <p>👉 Deixe seu e-mail e garanta seu lugar no Dia Zero</p>
+    </div>
+
+    <form id="subscribeForm">
+      <div class="input-group">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 </body>
 </html>
