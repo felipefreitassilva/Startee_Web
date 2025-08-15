@@ -27,8 +27,15 @@ function handleMainContentChange() {
 }
 
 const form = document.getElementById('subscribeForm');
+const submitFormBtn = document.getElementById('submit-form-btn');
+const submitBtnText = document.getElementById('submit-btn-text');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    submitFormBtn.disabled = true;
+    submitFormBtn.classList.add('loading');
+    submitBtnText.textContent = 'Enviando...';
+
     const data = {
         name: form.name.value,
         email: form.email.value
@@ -49,5 +56,9 @@ form.addEventListener('submit', async (e) => {
         }
     } catch (err) {
         alert('Erro na conexão: ' + err.message);
+    } finally {
+        submitFormBtn.disabled = false;
+        submitFormBtn.classList.remove('loading');
+        submitBtnText.textContent = 'Enviar';
     }
 });
