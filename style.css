@@ -78,11 +78,13 @@ hr.divider {
     transition: all 0.5s ease;
 }
 
-.nav-btn:hover {
-    color: var(--color-primary);
-    border: 3px solid var(--color-primary);
-    border-radius: 6px;
-    padding: 8px 10px;
+@media (hover: hover) and (pointer: fine) {
+    .nav-btn:hover {
+        color: var(--color-primary);
+        border: 3px solid var(--color-primary);
+        border-radius: 6px;
+        padding: 8px 10px;
+    }
 }
 
 .nav-btn.active {
