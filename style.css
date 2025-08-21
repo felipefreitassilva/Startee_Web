@@ -200,6 +200,18 @@ input[type="email"]:focus {
     display: block;
 }
 
+.pitch-container {
+    width: 100%;
+    display: flex;
+}
+
+.video-pitch {
+    border: none;
+    width: 100%;
+    aspect-ratio: 32 / 24;
+    object-fit: cover;
+}
+
 
 @media (min-width: 768px) {
     .input-group {
