@@ -1,3 +1,5 @@
+const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbzqf-xh7q2wr2bPKMN_NC5n2LR4U5ePmaG66PKatetpxMt5u1lSKu7k1B5Arf5BlrTMNg/exec";
+
 document.addEventListener('DOMContentLoaded', () => {
     handleMainContentChange();
 });
@@ -58,13 +60,15 @@ form.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbwzIEcOUuiWOx9z7xAeV-l18KGbbKvzZ-pbLwbxZnPJja9V3iyrDrCRDxGwbudNoMEn/exec', {
+        const response = await fetch(GOOGLE_SHEETS_URL, {
             method: 'POST',
             body: JSON.stringify(data)
         });
 
         const result = await response.json();
         if (result.status === 'success') {
+            const currentCount = parseInt(formsRespondandCount.textContent) || 0;
+            formsRespondandCount.textContent = currentCount + 1;
             alert('Obrigado pelo cadastro!');
             form.reset();
         } else {
