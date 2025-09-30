@@ -235,3 +235,26 @@ input[type="email"]:focus {
         transform: rotate(360deg);
     }
 }
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  border-top: 1px solid var(--color-secondary);
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  color: var(--color-secondary);
+}
+
+.footer a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
