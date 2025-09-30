@@ -1,0 +1,408 @@
+:root {
+  --color-background: #000000;
+  --color-primary: #007AFF;
+  --color-secondary: #7BB1EA;
+  --color-text: #ffffff;
+  --color-text-light: #cccccc;
+  --color-danger: #ff4757;
+  --color-danger-hover: #ff3838;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid var(--color-secondary);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  color: var(--color-secondary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+ol {
+  margin-left: 20px;
+  color: var(--color-text-light);
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+.reconsider-notice {
+  background: linear-gradient(135deg, rgba(123, 177, 234, 0.15), rgba(0, 122, 255, 0.1));
+  border: 2px solid var(--color-secondary);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(123, 177, 234, 0.2);
+}
+
+.reconsider-notice h3 {
+  color: var(--color-secondary);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.reconsider-notice p {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.reconsider-notice strong {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.reconsider-notice a {
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.reconsider-notice a:hover {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.confirmation-line {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.farewell-message {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 25px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.feedback-request {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 25px 0;
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feedback-request a {
+  color: var(--color-secondary);
+  font-weight: normal;
+}
+
+.feedback-request a:hover {
+  color: var(--color-primary);
+}
+
+.return-home {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-text-light);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+.return-home:hover {
+  background-color: var(--color-text-light);
+  color: var(--color-background);
+  opacity: 1;
+}
+
+.success-message {
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px solid #00ff00;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.success-message p {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.processing-note {
+  font-size: 0.95rem !important;
+  color: var(--color-text-light) !important;
+  font-style: italic;
+  margin-top: 15px !important;
+}
+
+.final-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.return-home, .contact-support {
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.return-home {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  border: 2px solid var(--color-secondary);
+  box-shadow: 0 4px 15px rgba(123, 177, 234, 0.3);
+}
+
+.return-home:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+}
+
+.contact-support {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 2px solid var(--color-text-light);
+}
+
+.contact-support:hover {
+  background-color: var(--color-text-light);
+  color: var(--color-background);
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-text-light);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: normal;
+  text-transform: none;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.delete-button:hover {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+  color: var(--color-text);
+  opacity: 1;
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background: var(--color-background);
+  border: 2px solid var(--color-secondary);
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.modal-content p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+#deleteForm {
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+#deleteForm input[type="email"] {
+  padding: 15px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+#deleteForm input[type="email"]::placeholder {
+  color: var(--color-text-light);
+}
+
+#deleteForm input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cancel-button {
+  padding: 12px 25px;
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(123, 177, 234, 0.3);
+}
+
+.cancel-button:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+}
+
+.confirm-delete-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-text-light);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0.8;
+}
+
+.confirm-delete-button:hover:not(:disabled) {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+  color: var(--color-text);
+  opacity: 1;
+}
+
+.confirm-delete-button:disabled {
+  background-color: #555;
+  border-color: #555;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
+.confirm-delete-button.loading {
+  background-color: #555;
+  border-color: #555;
+}
