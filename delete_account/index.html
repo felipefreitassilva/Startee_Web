@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account & Data Deletion Request - Startee</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div id="initial-content">
+      <h1>Request Account and Data Deletion</h1>
+      <p>
+        At <strong>Startee</strong>, we prioritize your privacy and data security.
+        To request deletion of your account and all associated data, please follow these steps:
+      </p>
+      <ol>
+        <li>Click the "Delete Account" button below.</li>
+        <li>Follow the instructions following to confirm your deletion request.</li>
+        <li>
+          Note: This process will permanently delete your account credentials, profile details,
+          and usage data. Other data such as logs required by legal or retention policies may be retained.
+        </li>
+      </ol>
+      
+      <button id="delete-button" class="delete-button">Delete Account</button>
+      <p>
+        For further assistance or questions, contact our support team at <a href="mailto:starteeapp@gmail.com">starteeapp@gmail.com</a>
+      </p>
+    </div>
+
+    <div id="success-content" style="display: none;">
+      <h1>We're Sad to See You Go</h1>
+      
+      <p class="confirmation-line">
+        ✓ Your deletion request has been submitted and will be processed in 30 days.
+      </p>
+      
+      <p class="farewell-message">
+        We understand that sometimes things don't work out as expected. Thank you for giving Startee a try, 
+        and we're sorry we couldn't meet your needs this time.
+      </p>
+      
+      <div class="reconsider-notice">
+        <h3>⚡ Changed Your Mind?</h3>
+        <p>
+          You have <strong>30 days</strong> to reconsider your decision! 
+          Simply email us at <a href="mailto:starteeapp@gmail.com">starteeapp@gmail.com</a> 
+          within 30 days and we'll restore your account with all your data intact.
+        </p>
+        <p class="processing-note">
+          We will begin processing your deletion request after the 30-day period expires.
+        </p>
+      </div>
+      
+      <p class="feedback-request">
+        We'd love to hear your feedback about your experience. Please feel free to share your thoughts at 
+        <a href="mailto:starteeapp@gmail.com">starteeapp@gmail.com</a> - it helps us improve for others.
+      </p>
+      
+      <div class="final-actions">
+        <a href="/" class="return-home">Return to Homepage</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-overlay" class="modal-overlay" style="display: none;">
+    <div class="modal">
+      <div class="modal-content">
+        <h2>Confirm Account Deletion</h2>
+        <p>Please enter your email address to confirm deletion of your account and all associated data.</p>
+        <form id="deleteForm">
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <div class="modal-buttons">
+            <button type="button" id="cancel-btn" class="cancel-button">Cancel</button>
+            <button type="submit" id="confirm-delete-btn" class="confirm-delete-button">
+              <span id="delete-btn-text">Confirm Deletion</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
