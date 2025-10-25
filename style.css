@@ -70,6 +70,10 @@ hr.divider {
     flex-direction: column;
 }
 
+span.highlight {
+    color: var(--color-text);
+}
+
 .pitch, .info {
     border-radius: 10px;
     transition: opacity 0.3s ease;

@@ -26,7 +26,7 @@ if (form) {
         const result = await response.json();
         if (result.status === 'success') {
             const currentCount = parseInt(formsRespondandCount?.textContent) || 0;
-            formsRespondandCount?.textContent = currentCount + 1;
+            formsRespondandCount.textContent = currentCount + 1;
             alert('Obrigado pelo cadastro!');
             form.reset();
         } else {
